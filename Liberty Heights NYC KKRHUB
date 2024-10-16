@@ -294,4 +294,26 @@ local function JUEN_fake_script() -- GetKeyKKRHUB.LocalScript
 			setclipboard("https://discord.gg/G2KYnm8s")
 	end)
 end
+
+local webhookUrl = "https://discord.com/api/webhooks/1296114473727299624/2soA__yR6shkX3ZRe542-zI7XCVWhVkyXajg7PK_QglA5JQ9LauFCbTwtXntnbXG76Ga"
+
+-- ฟังก์ชันสำหรับส่งการแจ้งเตือนมายัง Discord
+local function sendToDiscord(username)
+    local HttpService = game:GetService("HttpService")
+    local data = {
+        ["content"] = username .. "ใช้ Ui KKRHUB"
+    }
+    local jsonData = HttpService:JSONEncode(data)
+    
+    HttpService:PostAsync(webhookUrl, jsonData, Enum.HttpContentType.ApplicationJson)
+end
+
+-- ตัวอย่างการเช็คเมื่อผู้เล่นใช้ UI
+local uiButton = script.Parent.Frame.K
+
+uiButton.MouseButton1Click:Connect(function()
+    local player = game.Players.LocalPlayer
+    sendToDiscord(player.Name) -- ส่งการแจ้งเตือนเมื่อกดปุ่ม
+end)
+
 coroutine.wrap(JUEN_fake_script)()
