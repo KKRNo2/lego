@@ -1,51 +1,297 @@
-local screenGui = Instance.new("ScreenGui")
-local frame = Instance.new("Frame")
-local titleLabel = Instance.new("TextLabel")
-local textLabel = Instance.new("TextLabel")
-local yesButton = Instance.new("TextButton")
-local noButton = Instance.new("TextButton")
+-- Gui to Lua
+-- Version: 3.2
 
-screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+-- Instances:
 
-frame.Size = UDim2.new(0, 300, 0, 150)
-frame.Position = UDim2.new(0.5, -150, 0.5, -75)
-frame.BackgroundColor3 = Color3.new(1, 1, 1)
-frame.Visible = true
-frame.Parent = screenGui
+local GetKeyKKRHUB = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local G = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local K = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+local GG = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local TextLabel_2 = Instance.new("TextLabel")
+local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
+local CH = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local UIGradient_2 = Instance.new("UIGradient")
+local TextLabel_3 = Instance.new("TextLabel")
+local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
 
-titleLabel.Text = "KKR HUB"
-titleLabel.Size = UDim2.new(1, 0, 0.3, 0)
-titleLabel.Position = UDim2.new(0, 0, 0, 0)
-titleLabel.TextScaled = true
-titleLabel.Parent = frame
+--Properties:
 
-textLabel.Text = "Do you need help?"
-textLabel.Size = UDim2.new(1, 0, 0.3, 0)
-textLabel.Position = UDim2.new(0, 0, 0.3, 0)
-textLabel.TextScaled = true
-textLabel.Parent = frame
+GetKeyKKRHUB.Name = "GetKeyKKRHUB"
+GetKeyKKRHUB.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+GetKeyKKRHUB.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-yesButton.Text = "Yes"
-yesButton.Size = UDim2.new(0.4, 0, 0.3, 0)
-yesButton.Position = UDim2.new(0.05, 0, 0.7, 0)
-yesButton.Parent = frame
+Frame.Parent = GetKeyKKRHUB
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.468219012, 0, 0.322738379, 0)
+Frame.Size = UDim2.new(0.178728759, 0, 0.238386303, 0)
 
-noButton.Text = "No"
-noButton.Size = UDim2.new(0.4, 0, 0.3, 0)
-noButton.Position = UDim2.new(0.55, 0, 0.7, 0)
-noButton.Parent = frame
+UICorner.Parent = Frame
 
-yesButton.MouseButton1Click:Connect(function()
-    screenGui:Destroy()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/KKRNo2/KKR/refs/heads/main/Liberty%20Heights%20By.KKR"))()
-end)
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(162, 162, 162)
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0, 0, 0.169230774, 0)
+TextBox.Size = UDim2.new(1, 0, 0.256410271, 0)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 14.000
 
-noButton.MouseButton1Click:Connect(function()
-    screenGui:Destroy()
-    game.StarterGui:SetCore("SendNotification", {
-	Title = "bya👋";
-	Text = "see you";
-	Icon = "http://www.roblox.com/asset/?id=15273937357";
-	Duration = "5";
-})
-end)
+UICorner_2.Parent = TextBox
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.147887319, 0, -0.0871794894, 0)
+TextLabel.Size = UDim2.new(0.704225361, 0, 0.256410271, 0)
+TextLabel.Font = Enum.Font.Merriweather
+TextLabel.Text = "KKR HUB"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 30.000
+TextLabel.TextWrapped = true
+
+UITextSizeConstraint.Parent = TextLabel
+UITextSizeConstraint.MaxTextSize = 30
+
+UIAspectRatioConstraint.Parent = TextLabel
+UIAspectRatioConstraint.AspectRatio = 3.667
+
+G.Name = "G"
+G.Parent = Frame
+G.BackgroundColor3 = Color3.fromRGB(161, 161, 161)
+G.BorderColor3 = Color3.fromRGB(0, 0, 0)
+G.BorderSizePixel = 0
+G.Position = UDim2.new(0.580985904, 0, 0.558974385, 0)
+G.Size = UDim2.new(0.355633795, 0, 0.256410271, 0)
+G.Font = Enum.Font.Unknown
+G.Text = "Get Key"
+G.TextColor3 = Color3.fromRGB(0, 0, 0)
+G.TextScaled = true
+G.TextSize = 30.000
+G.TextWrapped = true
+
+UICorner_3.Parent = G
+
+UITextSizeConstraint_2.Parent = G
+UITextSizeConstraint_2.MaxTextSize = 30
+
+K.Name = "K"
+K.Parent = Frame
+K.BackgroundColor3 = Color3.fromRGB(161, 161, 161)
+K.BorderColor3 = Color3.fromRGB(0, 0, 0)
+K.BorderSizePixel = 0
+K.Position = UDim2.new(0.0633802786, 0, 0.558974385, 0)
+K.Size = UDim2.new(0.355633795, 0, 0.256410271, 0)
+K.Font = Enum.Font.Unknown
+K.Text = "Check"
+K.TextColor3 = Color3.fromRGB(0, 0, 0)
+K.TextScaled = true
+K.TextSize = 30.000
+K.TextWrapped = true
+
+UICorner_4.Parent = K
+
+UITextSizeConstraint_3.Parent = K
+UITextSizeConstraint_3.MaxTextSize = 30
+
+GG.Name = "GG"
+GG.Parent = GetKeyKKRHUB
+GG.BackgroundColor3 = Color3.fromRGB(167, 167, 167)
+GG.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GG.BorderSizePixel = 0
+GG.Position = UDim2.new(0.864100099, 0, 0.76700002, 0)
+GG.Size = UDim2.new(0.140339836, 0, 0.0709046423, 0)
+
+UICorner_5.Parent = GG
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.49, Color3.fromRGB(255, 78, 78)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Parent = GG
+
+TextLabel_2.Parent = GG
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.143497765, 0, 0.068965517, 0)
+TextLabel_2.Size = UDim2.new(0.708520174, 0, 0.862069011, 0)
+TextLabel_2.Font = Enum.Font.Unknown
+TextLabel_2.Text = "Copy Finished 🤙"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 30.000
+TextLabel_2.TextWrapped = true
+
+UITextSizeConstraint_4.Parent = TextLabel_2
+UITextSizeConstraint_4.MaxTextSize = 30
+
+CH.Name = "CH"
+CH.Parent = GetKeyKKRHUB
+CH.BackgroundColor3 = Color3.fromRGB(167, 167, 167)
+CH.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CH.BorderSizePixel = 0
+CH.Position = UDim2.new(0.864100099, 0, 0.76700002, 0)
+CH.Size = UDim2.new(0.140339836, 0, 0.0709046423, 0)
+
+UICorner_6.Parent = CH
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.49, Color3.fromRGB(255, 78, 78)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient_2.Parent = CH
+
+TextLabel_3.Parent = CH
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.143497765, 0, 0.068965517, 0)
+TextLabel_3.Size = UDim2.new(0.708520174, 0, 0.862069011, 0)
+TextLabel_3.Font = Enum.Font.Unknown
+TextLabel_3.Text = "KKR HUB 😈"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 30.000
+TextLabel_3.TextWrapped = true
+
+UITextSizeConstraint_5.Parent = TextLabel_3
+UITextSizeConstraint_5.MaxTextSize = 30
+
+-- Scripts:
+
+local function JUEN_fake_script() -- GetKeyKKRHUB.LocalScript 
+	local script = Instance.new('LocalScript', GetKeyKKRHUB)
+
+	local Gui = script.Parent
+	local TweenService = game:GetService("TweenService")
+	local uiElement = script.Parent.GG -- UI Element ที่คุณต้องการอนิเมต
+	local button = script.Parent.Frame.G
+	script.Parent.Frame.Draggable = true
+	script.Parent.Frame.Active = true
+	
+	-- กำหนดการตั้งค่าของ Tween
+	local tweenInfo = TweenInfo.new(
+		1, -- เวลาที่ใช้ในการอนิเมต (1 วินาที)
+		Enum.EasingStyle.Quad, -- สไตล์การเคลื่อนไหว
+		Enum.EasingDirection.Out -- ทิศทางการเคลื่อนไหว
+	)
+	
+	-- ตั้งค่าตำแหน่งเริ่มต้นให้ UI Element เริ่มนอกจอ
+	uiElement.Position = UDim2.new(0.995, 0, 0.767, 0) -- ตำแหน่งเริ่มต้น
+	uiElement.Visible = false -- ตั้งค่าให้ UI Element ไม่แสดงผล
+	
+	-- กำหนดค่าที่ต้องการอนิเมต
+	local goal = {
+		Position = UDim2.new(0.864, 0, 0.767, 0) -- ตำแหน่งใหม่
+	}
+	
+	-- สร้างฟังก์ชันสำหรับเริ่มต้นอนิเมชั่นเมื่อกดปุ่ม
+	local function onButtonClicked()
+		uiElement.Visible = true -- ทำให้ UI Element แสดงผล
+		local tween = TweenService:Create(uiElement, tweenInfo, goal)
+		tween:Play()
+	
+		-- รอให้การอนิเมตเสร็จสิ้น
+		tween.Completed:Wait()
+	
+		-- รอเพิ่มอีก 5 วินาที
+		wait(5)
+	
+		-- ตั้งค่ากลับไปที่ตำแหน่งเริ่มต้น
+		local returnGoal = {
+			Position = UDim2.new(0.995, 0, 0.767, 0) -- กลับไปที่ตำแหน่งเริ่มต้น
+		}
+	
+		-- สร้างการอนิเมตเพื่อกลับไปที่ตำแหน่งเริ่มต้น
+		local returnTween = TweenService:Create(uiElement, tweenInfo, returnGoal)
+		returnTween:Play()
+	
+		-- รอให้การอนิเมตกลับเสร็จสิ้นก่อนทำให้หายไป
+		returnTween.Completed:Wait()
+		uiElement.Visible = false -- ทำให้ UI Element หายไป
+	end
+	
+	-- เชื่อมโยงเหตุการณ์เมื่อปุ่มถูกคลิก
+	button.MouseButton1Click:Connect(onButtonClicked)
+	
+	------------------------------------------------------------------------------------------
+	
+	local TweenService = game:GetService("TweenService")
+	local uiElement = script.Parent.CH -- UI Element ที่คุณต้องการอนิเมต
+	local button = script.Parent.Frame.K
+	local textBox = script.Parent.Frame.TextBox -- สมมติว่า TextBox อยู่ใน Frame เดียวกัน
+	
+	-- กำหนดการตั้งค่าของ Tween
+	local tweenInfo = TweenInfo.new(
+		1, -- เวลาที่ใช้ในการอนิเมต (1 วินาที)
+		Enum.EasingStyle.Quad, -- สไตล์การเคลื่อนไหว
+		Enum.EasingDirection.Out -- ทิศทางการเคลื่อนไหว
+	)
+	
+	-- ตั้งค่าตำแหน่งเริ่มต้นให้ UI Element เริ่มนอกจอ
+	uiElement.Position = UDim2.new(0.995, 0, 0.767, 0) -- ตำแหน่งเริ่มต้น
+	uiElement.Visible = false -- ตั้งค่าให้ UI Element ไม่แสดงผล
+	
+	-- กำหนดค่าที่ต้องการอนิเมต
+	local goal = {
+		Position = UDim2.new(0.864, 0, 0.767, 0) -- ตำแหน่งใหม่
+	}
+	
+	-- สร้างฟังก์ชันสำหรับเริ่มต้นอนิเมชั่นเมื่อกดปุ่ม
+	local function onButtonClicked()
+		local inputText = textBox.Text -- รับข้อความจาก TextBox
+	
+		-- ตรวจสอบข้อความใน TextBox
+		if inputText == "KKRHub" then
+			uiElement.Visible = true -- ทำให้ UI Element แสดงผล
+			local tween = TweenService:Create(uiElement, tweenInfo, goal)
+			tween:Play()
+	
+			-- รอให้ผ่านไป 5 วินาที
+			tween.Completed:Wait() -- รอให้การอนิเมตเสร็จสิ้น
+			wait(3) -- รอเพิ่มอีก 5 วินาที
+	
+			-- ตั้งค่ากลับไปที่ตำแหน่งเริ่มต้น
+			local returnGoal = {
+				Position = UDim2.new(0.995, 0, 0.767, 0) -- กลับไปที่ตำแหน่งเริ่มต้น
+			}
+	
+			-- สร้างการอนิเมตเพื่อกลับไปที่ตำแหน่งเริ่มต้น
+			local returnTween = TweenService:Create(uiElement, tweenInfo, returnGoal)
+			returnTween:Play()
+	
+			-- รอให้การอนิเมตกลับเสร็จสิ้นก่อนทำให้หายไป
+			returnTween.Completed:Wait()
+			uiElement.Visible = false -- ทำให้ UI Element หายไป
+			Gui:Destroy()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/KKRNo2/KKR/refs/heads/main/Liberty%20Heights%20By.KKR"))()
+		else
+			print("KKR") -- แสดงข้อความผิดใน Output
+		end
+	end
+	
+	-- เชื่อมโยงเหตุการณ์เมื่อปุ่มถูกคลิก
+	button.MouseButton1Click:Connect(onButtonClicked)
+	
+	script.Parent.Frame.G.MouseButton1Click:Connect(function()
+			setclipboard("https://discord.gg/G2KYnm8s")
+	end)
+end
+coroutine.wrap(JUEN_fake_script)()
