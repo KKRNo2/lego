@@ -1,0 +1,88 @@
+
+
+local opendex = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+
+
+opendex.Name = "opendex"
+opendex.Parent = game.CoreGui
+
+ImageLabel.Parent = opendex
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.466624677, 0, 0.438875318, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.Image = "rbxassetid://84163799164916"
+
+TextLabel.Parent = opendex
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.406171292, 0, 0.471882641, 0)
+TextLabel.Size = UDim2.new(0, 105, 0, 46)
+TextLabel.Font = Enum.Font.Fondamento
+TextLabel.Text = "KKR HUB"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+
+local function JVEGINA_fake_script()
+	local script = Instance.new('LocalScript', opendex)
+
+	local TweenService = game:GetService("TweenService")
+	
+	local screenGui = script.Parent 
+	local imageLabel = screenGui:WaitForChild("ImageLabel")
+	local label = screenGui:WaitForChild("TextLabel")
+	
+
+	imageLabel.Position = UDim2.new(0.381, 0, 0.439, 0)
+	label.Position = UDim2.new(0.467, 0, 0.474, 0)
+	
+	local tweenDuration = 2
+	
+	local imageLabelGoalPosition = UDim2.new(0.467, 0, 0.439, 0)
+	local labelGoalPosition = UDim2.new(0.406, 0, 0.472, 0)
+	
+	local imageLabelTweenInfo = TweenInfo.new(tweenDuration, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	local labelTweenInfo = TweenInfo.new(tweenDuration, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	local imageLabelGoal = {Position = imageLabelGoalPosition}
+	local labelGoal = {Position = labelGoalPosition}
+	
+	local imageLabelTween = TweenService:Create(imageLabel, imageLabelTweenInfo, imageLabelGoal)
+	local labelTween = TweenService:Create(label, labelTweenInfo, labelGoal)
+	
+	local fadeTweenInfo = TweenInfo.new(tweenDuration, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	local imageLabelFadeGoal = {ImageTransparency = 1}
+	local labelFadeGoal = {TextTransparency = 1}
+	
+	local imageLabelFade = TweenService:Create(imageLabel, fadeTweenInfo, imageLabelFadeGoal)
+	local labelFade = TweenService:Create(label, fadeTweenInfo, labelFadeGoal)
+	
+	wait(1)
+	
+	imageLabelTween:Play()
+	labelTween:Play()
+	
+	imageLabelTween.Completed:Connect(function()
+		imageLabelFade:Play()
+	end)
+	
+	labelTween.Completed:Connect(function()
+		labelFade:Play()
+	end)
+	
+	labelFade.Completed:Connect(function()
+		screenGui:Destroy()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/KKRNo2/KKR/refs/heads/main/Dex"))()	
+	end)
+	
+end
+coroutine.wrap(JVEGINA_fake_script)()
