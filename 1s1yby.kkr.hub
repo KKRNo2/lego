@@ -374,7 +374,7 @@ local function JUEN_fake_script() -- GetKeyKKRHUB.LocalScript
 	button.MouseButton1Click:Connect(onButtonClicked)
 	
 	script.Parent.Frame.G.MouseButton1Click:Connect(function()
-			setclipboard("https://discord.gg/G2KYnm8s")
+			setclipboard("https://discord.gg/ZhwbxtvN")
 	end)
 end
 
