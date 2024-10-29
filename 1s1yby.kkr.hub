@@ -342,7 +342,7 @@ local function JUEN_fake_script() -- GetKeyKKRHUB.LocalScript
 		local inputText = textBox.Text -- รับข้อความจาก TextBox
 	
 		-- ตรวจสอบข้อความใน TextBox
-		if inputText == "123456789ezkkr" then
+		if inputText == "kkrhubezhack888dd" then
 			uiElement.Visible = true -- ทำให้ UI Element แสดงผล
 			local tween = TweenService:Create(uiElement, tweenInfo, goal)
 			tween:Play()
@@ -374,7 +374,7 @@ local function JUEN_fake_script() -- GetKeyKKRHUB.LocalScript
 	button.MouseButton1Click:Connect(onButtonClicked)
 	
 	script.Parent.Frame.G.MouseButton1Click:Connect(function()
-			setclipboard("https://opaque-common-quince.glitch.me/key1.html")
+			setclipboard("https://olivine-abrupt-octave.glitch.me/key1.html")
 	end)
 end
 
